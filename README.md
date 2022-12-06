@@ -22,6 +22,8 @@ then install the gem into your system:
 
 then also generate views for devise - `rails g devise:views`
 
+to link a model with devise `rails g devise:model`
+
 ### adding a username to your devise
 
 devise comes with two fields, with the email and the password
