@@ -21,3 +21,13 @@ then install the gem into your system:
 `rails g devise:install`
 
 then also generate views for devise - `rails g devise:views`
+
+### adding a username to your devise
+
+devise comes with two fields, with the email and the password
+
+and here we need to add a new attribute, username.
+
+go to your users model, the `attr_accessor :username`
+
+then you run this command rails generate add_username_to_users username:string` to add the field to your database.
