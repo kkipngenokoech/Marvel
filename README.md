@@ -30,4 +30,4 @@ and here we need to add a new attribute, username.
 
 go to your users model, the `attr_accessor :username`
 
-then you run this command rails generate add_username_to_users username:string` to add the field to your database.
+then you run this command rails generate migration add_username_to_users username:string` to add the field to your database.
