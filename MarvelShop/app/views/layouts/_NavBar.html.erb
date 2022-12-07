@@ -18,7 +18,9 @@
 
     <nav class = "stick-to-right">
         <% if user_signed_in? %>
-            <%= link_to "edit user", edit_user_registration_path, class: "" %>|<%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "custom link" %>
+            <%= link_to "Hi #{current_user.username}", edit_user_registration_path, class: "" %>
+            <br>
+            <%= link_to 'sign out', destroy_user_session_path, :method => :delete, class: "custom link" %>
         <% else %>
             <%= link_to 'sign in', new_user_session_path, class:"custom-link" %> 
             |
