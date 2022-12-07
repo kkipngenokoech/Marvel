@@ -16,7 +16,8 @@
 
   <p>
     <strong>Image:</strong>
-    <%= link_to tshirt.image.filename, tshirt.image if tshirt.image.attached? %>
+    <%= image_tag tshirt.image %>
+    <%# <%= link_to tshirt.image.filename, tshirt.image if tshirt.image.attached? %> 
   </p>
 
 </div>
