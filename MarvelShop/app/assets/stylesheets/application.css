@@ -56,3 +56,15 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  ol {
+    list-style-type: upper-alpha;
+  }
+
+  ul {
+    list-style-type: circle;
+  }
+/* styling visited links to have the same color has other links */
+  a:visited {
+    color: #0000FF;
+  }
