@@ -68,3 +68,9 @@
   a:visited {
     color: #0000FF;
   }
+
+  .index-column {
+    float: left;
+    width: 31%;
+    padding: 5px;
+}

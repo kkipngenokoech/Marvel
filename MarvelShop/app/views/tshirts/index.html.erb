@@ -1,14 +1,14 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Tshirts</h1>
-
+<%= link_to "New tshirt", new_tshirt_path %>
 <div id="tshirts">
   <% @tshirts.each do |tshirt| %>
+  <div class = "index-column">
     <%= render tshirt %>
     <p>
       <%= link_to "Show this tshirt", tshirt %>
     </p>
+  </div>
   <% end %>
 </div>
-
-<%= link_to "New tshirt", new_tshirt_path %>
