@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tshirt %>
+
+<div>
+  <%= link_to "Edit this tshirt", edit_tshirt_path(@tshirt) %> |
+  <%= link_to "Back to tshirts", tshirts_path %>
+
+  <%= button_to "Destroy this tshirt", @tshirt, method: :delete %>
+</div>

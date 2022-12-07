@@ -1,0 +1,22 @@
+<div id="<%= dom_id tshirt %>">
+  <p>
+    <strong>Color:</strong>
+    <%= tshirt.color %>
+  </p>
+
+  <p>
+    <strong>Character:</strong>
+    <%= tshirt.character %>
+  </p>
+
+  <p>
+    <strong>Size:</strong>
+    <%= tshirt.size %>
+  </p>
+
+  <p>
+    <strong>Image:</strong>
+    <%= link_to tshirt.image.filename, tshirt.image if tshirt.image.attached? %>
+  </p>
+
+</div>
