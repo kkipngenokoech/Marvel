@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: %i[ show edit update destroy ]
+  before_action :check_role
 
   # GET /users or /users.json
   def index
@@ -63,6 +64,12 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
+    def check_role
+      user = current_user
+      if user.role == false
+        redirect_to root_url, notice: "You are not authorized to perform this action."
+      end
+    end
     # Only allow a list of trusted parameters through.
     def user_params
       params.require(:user).permit(:username, :password, :email, :role)

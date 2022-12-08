@@ -1,6 +1,12 @@
 <p style="color: red"><%= notice %></p>
 
-<h1>Tshirts</h1>
+<h1>
+  <%= link_to "Tshirts",root_path %> 
+  <% if current_user&.role? == true %>
+  |
+    <%= link_to "Users", users_path %> 
+  <% end %>
+</h1>
 <div>
 <%= form_tag "/tshirt", method: "Get" do%>
     <%# <%= label_tag :color %> 

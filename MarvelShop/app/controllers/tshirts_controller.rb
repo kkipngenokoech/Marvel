@@ -63,6 +63,9 @@ class TshirtsController < ApplicationController
   end
   def filter
   end
+  def coords
+    @tshirts = Tshirt.all
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

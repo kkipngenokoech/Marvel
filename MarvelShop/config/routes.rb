@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   # root "articles#index"
  root "tshirts#index"
  get "filter", to: "tshirts#filter"
+ get "coords", to: "tshirts#coords"
 end
