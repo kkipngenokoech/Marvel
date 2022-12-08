@@ -1,0 +1,16 @@
+<h1>Add a review</h1>
+
+<!-- In your view -->
+<%= form_with model: @review do |form| %>
+  <div>
+    <%= form.label :review %>
+    <%= form.text_field :review %>
+  </div>
+  <div>
+    <%= form.label :picture %>
+    <%= form.file_field :picture %>
+  </div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :requests
+  resources :requests, :reviews
   resources :tshirts
   devise_for :users
   resources :users
