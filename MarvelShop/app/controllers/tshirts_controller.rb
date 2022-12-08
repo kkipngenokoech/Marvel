@@ -1,5 +1,7 @@
 class TshirtsController < ApplicationController
   before_action :set_tshirt, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, except: [:index, :show, :filter]
+  before_action :check_role, only: [:new,:edit,:delete]
 
   # GET /tshirts or /tshirts.json
   def index
@@ -66,5 +68,12 @@ class TshirtsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def tshirt_params
       params.require(:tshirt).permit(:color, :character, :size, :image)
+    end
+
+    def check_role
+      user = current_user
+      if user.role == false
+        redirect_to root_url, notice: "You are not authorized to perform this action."
+      end
     end
 end
