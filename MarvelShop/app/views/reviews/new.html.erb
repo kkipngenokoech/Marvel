@@ -1,16 +1,16 @@
 <h1>Add a review</h1>
 
 <!-- In your view -->
-<%= form_with model: @review do |form| %>
+<%= form_tag reviews_path,method: :post do %>
   <div>
-    <%= form.label :review %>
-    <%= form.text_field :review %>
+    <%= label_tag :review %>
+    <%= text_field_tag  :review %>
   </div>
   <div>
-    <%= form.label :picture %>
-    <%= form.file_field :picture %>
+    <%= label_tag :picture %>
+    <%= file_field_tag :picture %>
   </div>
   <div>
-    <%= form.submit %>
+    <%= submit_tag "send review" %>
   </div>
 <% end %>

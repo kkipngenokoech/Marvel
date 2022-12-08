@@ -1,5 +1,5 @@
 <h1>Filters</h1>
-<form method = "POST", action = "/tshirt/index" enctype="multipart/form-data">
+<%= form_tag(tshirts_path, method: :get) do %>
     <table>
         <tr>
             <td>COLOR</td>
@@ -8,31 +8,47 @@
         </tr>
         <tr>
         <td>
-            <input type = "checkbox" name = "selectall" value = "select all"> select all<br>
-            <input type = "checkbox" name = "Blue" value = "Blue"> Blue<br>
-            <input type = "checkbox" name = "Black" value = "Black"> Black<br>
-            <input type = "checkbox" name = "Red" value = "red"> Red<br>
-            <input type = "checkbox" name = "white" value = "white"> White<br>
+            <input type = "checkbox" name = "selectall" value = "select all"> select all
+            <br>
+            <%= check_box_tag :color,"Blue",false %><%= label_tag "Blue"%>
+            <br>
+            <%= check_box_tag :color,"Black",false %><%= label_tag "Black"%>
+            <br>
+            <%= check_box_tag :color,"Red",false %><%= label_tag "Red"%>
+            <br>
+            <%= check_box_tag :color,"White",false %><%= label_tag "White"%>
         </td>
         <td>
-            <input type = "checkbox" name = "small" value = "small"> S<br>
-            <input type = "checkbox" name = "medium" value = "medium"> M<br>
-            <input type = "checkbox" name = "extrasmall" value = "extrasmall"> XS<br>
-            <input type = "checkbox" name = "extralarge" value = "extralarge"> XL<br>
-            <input type = "checkbox" name = "extraextralarge" value = "extraextralarge"> XXL<br>
-            <input type = "checkbox" name = "extraextraextralarge" value = "extraextraextralarge"> XXXL<br>
+            <%= check_box_tag :size,"S",false %><%= label_tag "S"%>
+            <br>
+            <%= check_box_tag :size,"M",false %><%= label_tag "M"%>
+            <br>
+            <%= check_box_tag :size,"XS",false %><%= label_tag "XS"%>
+            <br>
+            <%= check_box_tag :size,"XL",false %><%= label_tag "XL"%>
+            <br>
+            <%= check_box_tag :size,"XXL",false %><%= label_tag "XXL"%>
+            <br>
+            <%= check_box_tag :size,"XXXL",false %><%= label_tag "XXXL"%>
+            <br>
         </td>
         <td>
-            <input type = "checkbox" name = "ironman" value = "ironman"> Iron Man<br>
-            <input type = "checkbox" name = "thor" value = "thor"> Thor<br>
-            <input type = "checkbox" name = "blackpanther" value = "blackpanther"> Black Panther<br>
-            <input type = "checkbox" name = "spiderman" value = "spiderman"> Spider Man<br>
-            <input type = "checkbox" name = "captainamerica" value = "captainamerica"> Captain-America<br>
-            <input type = "checkbox" name = "hulk" value = "hulk"> Hulk<br>
+            <%= check_box_tag :character,"Iron Man",false %><%= label_tag "Iron Man"%>
+            <br>
+            <%= check_box_tag :character,"Hulk",false %><%= label_tag "Hulk"%>
+             <br>
+            <%= check_box_tag :character,"Black Panther",false %><%= label_tag "Black Panther"%>
+            <br>
+            <%= check_box_tag :character,"Spider Man",false %><%= label_tag "Spider Man"%>
+            <br>
+            <%= check_box_tag :character,"Captain America",false %><%= label_tag "Captain America"%>
+            <br>
+            <%= check_box_tag :character,"Avenger",false %><%= label_tag "Avenger"%>
+            <br>
         </td>
         </tr>
     </table>
     <div>
         <input type= "submit" value = "submit" class = "custom-link">
     </div>
-</form>
+<% end %>
