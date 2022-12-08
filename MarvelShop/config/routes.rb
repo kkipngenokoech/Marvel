@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :requests
   resources :tshirts
   devise_for :users
   resources :users
@@ -7,4 +8,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
  root "tshirts#index"
+ get "filter", to: "tshirts#filter"
 end

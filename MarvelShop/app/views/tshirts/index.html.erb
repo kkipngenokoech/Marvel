@@ -1,6 +1,14 @@
 <p style="color: red"><%= notice %></p>
 
 <h1>Tshirts</h1>
+<div>
+<%= form_tag "/tshirt", method: "Get" do%>
+    <%# <%= label_tag :color %> 
+    <%= text_field_tag :color, params[:color] %>
+    <%= submit_tag "search", class: "" %>
+    <%= link_to "filters", filter_path, class: "custom link" %>
+<% end %>
+</div>
 <%= link_to "New tshirt", new_tshirt_path %>
 <div id="tshirts">
   <% @tshirts.each do |tshirt| %>

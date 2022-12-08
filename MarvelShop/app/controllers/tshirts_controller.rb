@@ -5,7 +5,10 @@ class TshirtsController < ApplicationController
 
   # GET /tshirts or /tshirts.json
   def index
-    @tshirts = Tshirt.all
+    @tshirts = Tshirt.where(nil)
+    @tshirts = Tshirt.filter_by_color(params[:color]) if params[:color].present?
+    @tshirts = Tshirt.filter_by_size(params[:size]) if params[:size].present?
+    @tshirts = Tshirt.filter_by_character(params[:character]) if params[:character].present?
   end
 
   # GET /tshirts/1 or /tshirts/1.json
@@ -57,6 +60,8 @@ class TshirtsController < ApplicationController
       format.html { redirect_to tshirts_url, notice: "Tshirt was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+  def filter
   end
 
   private
