@@ -12,7 +12,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/new
   def new
-    @comment = Comment.new
+    ##tshirt = Tshirt.find(@tshirt_id)
+    #@comment = Comment.new(text: "this is a great tshirt", tshirt_id: tshirt.id)
   end
 
   # GET /comments/1/edit
