@@ -13,6 +13,11 @@ class TshirtsController < ApplicationController
 
   # GET /tshirts/1 or /tshirts/1.json
   def show
+    @tshirt = Tshirt.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render json: @tshirt }
+    end
   end
 
   # GET /tshirts/new
