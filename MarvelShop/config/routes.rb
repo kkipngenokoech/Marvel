@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :comments
   resources :requests, :reviews
   resources :tshirts
   devise_for :users
