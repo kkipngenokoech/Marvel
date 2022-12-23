@@ -16,7 +16,8 @@ class TshirtsController < ApplicationController
     @tshirt = Tshirt.find(params[:id])
     respond_to do |format|
       format.html
-      format.json { render json: @tshirt }
+      format.xml {render :xml => @tshirt}
+      format.json { render :json => @tshirt }
     end
   end
 

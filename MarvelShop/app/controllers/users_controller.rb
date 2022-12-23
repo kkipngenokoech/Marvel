@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to user_url(@user), notice: "User was successfully created." }
+        format.html { redirect_to user_url(@user), alert: "User was successfully created." }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -67,7 +67,7 @@ class UsersController < ApplicationController
     def check_role
       user = current_user
       if user.role == false
-        redirect_to root_url, notice: "You are not authorized to perform this action."
+        redirect_to root_url, flash[:notice] => "You are not authorized to perform this action."
       end
     end
     # Only allow a list of trusted parameters through.
