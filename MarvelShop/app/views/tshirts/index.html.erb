@@ -1,8 +1,8 @@
 <p style="color: red"><%= notice %></p>
 
 <h1>
-  <%= link_to "Tshirts",root_path %> 
   <% if current_user&.role? == true %>
+    <%= link_to "Tshirts",root_path %> 
   |
     <%= link_to "Users", users_path %> 
   <% end %>
@@ -14,7 +14,9 @@
     <%= link_to "filters", filter_path, class: "custom link" %>
   <% end %>
 </div>
-<%= link_to "New tshirt", new_tshirt_path %>
+<% if current_user&.role? == true%>
+  <%= link_to "New tshirt", new_tshirt_path %>
+<% end %>
 <div class ="tshirts">
   <% @tshirts.each do |tshirt| %>
   <div class = "index-column">

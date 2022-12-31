@@ -84,7 +84,11 @@
 }
 
 .index-column {
-  flex: 0 0 32.3%;
+  flex: 0 0 32.0%;
   padding: 5px;
+  margin: 2px;
+  border: #333;
+  background-color: aliceblue;
+  border-radius: 6px;
 }
 
