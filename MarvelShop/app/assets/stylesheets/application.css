@@ -13,7 +13,10 @@
  *= require_tree .
  *= require_self
  */
-
+* {
+  padding: 0;
+  margin: 0;
+}
 
  .stick-second-right {
     float: left;
@@ -69,11 +72,19 @@
     color: #0000FF;
   }
 
-  .index-column {
+  /* .index-column {
     float: left;
     width: 32.3%;
     padding: 5px;
+} */
+
+.tshirts {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-
+.index-column {
+  flex: 0 0 32.3%;
+  padding: 5px;
+}
 
