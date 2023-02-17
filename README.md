@@ -1,35 +1,33 @@
-# Marvel
+# README
 
-an e-commerce website to buy marvel tshirts based on marvel characters
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-## rails g resource and rails g scaffold
+Things you may want to cover:
 
-rails g resource and rails g scaffold generates controllers views and models the only difference between the two is that scaffold goes an extra mile to generate forms for the views.
+* Ruby version
 
-they also generate restful routes for one.
+* System dependencies
 
-## devise
+* Configuration
 
-to install devise and use it in your system:
+* Database creation
 
-add the gem file in your [Gemfile](MarvelShop/Gemfile)
+* Database initialization
 
-then you run `bundle install` this will install the gem from the ruby store for gems
+* How to run the test suite
 
-then install the gem into your system:
+* Services (job queues, cache servers, search engines, etc.)
 
-`rails g devise:install`
+* Deployment instructions
 
-then also generate views for devise - `rails g devise:views`
+* ...
 
-to link a model with devise `rails g devise:model`
+## instructions to use
 
-### adding a username to your devise
+1. clone the repository
+2. run rails db:migrate
+3. run rails db:seed
+4. run rails s
 
-devise comes with two fields, with the email and the password
-
-and here we need to add a new attribute, username.
-
-go to your users model, the `attr_accessor :username`
-
-then you run this command rails generate migration add_username_to_users username:string` to add the field to your database.
+check your browser for the implementations.
