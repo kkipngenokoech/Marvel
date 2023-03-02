@@ -31,3 +31,7 @@ Things you may want to cover:
 4. run rails s
 
 check your browser for the implementations.
+
+## LINK TO DEPLOYED SITE
+
+here is the link to the deployed version of this ![site](https://marvelshop.onrender.com/)
