@@ -34,4 +34,4 @@ check your browser for the implementations.
 
 ## LINK TO DEPLOYED SITE
 
-here is the link to the deployed version of this ![site](https://marvelshop.onrender.com/)
+here is the link to the deployed version of this [site](https://marvelshop.onrender.com/)
