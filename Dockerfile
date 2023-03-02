@@ -1,4 +1,5 @@
-FROM renderapp/ruby:3.1.2p20 
+FROM ruby:3.1.2p20
+
 
 WORKDIR /app
 COPY Gemfile Gemfile.lock /app/
